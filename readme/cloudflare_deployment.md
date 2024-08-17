@@ -6,7 +6,7 @@
 
 Cloudflare Workers 和 Pages 使用的是 V8 引擎，而不是完整的 Node.js 环境。这意味着某些 Node.js API 可能不可用或行为不同。
 
-### 注意事项：
+### 注意事项
 
 1. 避免使用 Node.js 特定的模块，如 `fs`、`path` 等。
 2. 使用 Web API 替代 Node.js API，例如使用 `fetch` 而不是 `http` 模块。
@@ -18,3 +18,15 @@ Cloudflare Workers 和 Pages 使用的是 V8 引擎，而不是完整的 Node.js
 
 ```typescript
 export const runtime = 'edge';
+```
+
+## 部署命令
+
+如果您使用 pnpm 进行部署，请使用以下命令：
+
+```bash
+pnpm dlx @cloudflare/next-on-pages
+```
+
+这个命令会使用 Cloudflare 的 next-on-pages 工具来部署你的 Next.js 应用。
+```
