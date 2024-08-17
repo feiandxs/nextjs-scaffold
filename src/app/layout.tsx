@@ -7,9 +7,18 @@ import { siteInfo } from '@/constants/site-info';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: siteInfo.title,
-  description: siteInfo.description,
+  title: siteInfo.metaInfo.title,
+  description: siteInfo.metaInfo.description,
+  keywords: siteInfo.metaInfo.keywords,
+  openGraph: {
+    title: siteInfo.ogInfo.title,
+    description: siteInfo.ogInfo.description,
+    images: [siteInfo.ogInfo.image],
+    url: siteInfo.ogInfo.url,
+  },
 };
+
+export const runtime = 'edge';
 
 export default function RootLayout({
   children,

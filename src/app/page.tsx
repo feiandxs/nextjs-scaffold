@@ -1,6 +1,17 @@
+import type { Metadata } from 'next';
+
+import { siteInfo } from '@/constants/site-info';
+
 function delay(ms: number) {
   return new Promise((resolve) => { setTimeout(resolve, ms); });
 }
+
+export const runtime = 'edge';
+
+export const metadata: Metadata = {
+  title: `Home | ${siteInfo.name}`,
+  description: siteInfo.description,
+};
 
 const MainPage = async () => {
   await delay(3000);
