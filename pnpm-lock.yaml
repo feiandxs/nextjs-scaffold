@@ -23,6 +23,9 @@ dependencies:
   dayjs:
     specifier: ^1.11.12
     version: 1.11.12
+  jose:
+    specifier: ^5.6.3
+    version: 5.6.3
   lucide-react:
     specifier: ^0.428.0
     version: 0.428.0(react@18.3.1)
@@ -4013,6 +4016,10 @@ packages:
   /jiti@1.21.6:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
+
+  /jose@5.6.3:
+    resolution: {integrity: sha512-1Jh//hEEwMhNYPDDLwXHa2ePWgWiFNNUadVmguAAw2IJ6sj9mNxV5tGXJNqlMkJAybF6Lgw1mISDxTePP/187g==}
+    dev: false
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
