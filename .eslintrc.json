@@ -9,7 +9,7 @@
       }
     }
   ],
-  "plugins": ["@typescript-eslint",  "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     // 关闭原生的 no-unused-vars 规则
     "no-unused-vars": "off",
