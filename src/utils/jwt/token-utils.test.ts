@@ -2,7 +2,7 @@ import { JWT_SECRET_KEY } from '@/constants/jwt.config';
 import { createToken, verifyToken, UserPayload } from './token-utils';
 
 // Mock JWT_SECRET_KEY
-jest.mock('../constants/jwt.config', () => ({
+jest.mock('@/constants/jwt.config', () => ({
   JWT_SECRET_KEY: 'test-secret-key',
 }));
 

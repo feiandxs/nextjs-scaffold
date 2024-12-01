@@ -1,6 +1,9 @@
 {
-  "extends": ["airbnb", "next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -39,7 +42,7 @@
     "react/jsx-indent-props": ["error", 2],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": 0,
+    "react/jsx-props-no-spreading": "off",
     "eact/jsx-no-useless-fragment": 0,
     "react/jsx-max-props-per-line": [
       "error",
@@ -77,7 +80,8 @@
     "no-underscore-dangle": 0,
     "jsx-quotes": [1, "prefer-single"],
     "array-callback-return": 0,
-    "react/require-default-props": "warn"
+    "react/require-default-props": "warn",
+    "no-constant-condition": "warn",
+    "@typescript-eslint/return-await": "off"
   }
 }
-
