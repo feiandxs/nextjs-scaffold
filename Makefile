@@ -1,14 +1,15 @@
-.PHONY: help install lint test build clean dev
+.PHONY: help install lint test build clean dev switch-orm
 
 # 默认目标，显示帮助信息
 help:
 	@echo "Available commands:"
-	@echo "  make install  - Install project dependencies using pnpm"
-	@echo "  make lint     - Run ESLint to check code"
-	@echo "  make test     - Run tests"
-	@echo "  make build    - Build the project"
-	@echo "  make clean    - Clean build artifacts"
-	@echo "  make dev      - Start development server"
+	@echo "  make install    - Install project dependencies using pnpm"
+	@echo "  make lint       - Run ESLint to check code"
+	@echo "  make test       - Run tests"
+	@echo "  make build      - Build the project"
+	@echo "  make clean      - Clean build artifacts"
+	@echo "  make dev        - Start development server"
+	@echo "  make switch-orm - Switch between Prisma and Drizzle ORM"
 
 # 安装依赖
 install:
@@ -34,6 +35,11 @@ clean:
 # 启动开发服务器
 dev:
 	pnpm dev
+
+# 切换 ORM
+switch-orm:
+	@chmod +x ./scripts/switch-orm.sh
+	@./scripts/switch-orm.sh
 
 # 组合命令：运行 lint、test 和 build
 all: lint test build
