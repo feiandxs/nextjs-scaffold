@@ -27,7 +27,7 @@ const menuGroups = [
 ];
 
 // 其他菜单项 - 用于演示滚动
-const extraItems = Array(30)
+const extraItems = new Array(30)
   .fill(0)
   .map((_, index) => ({
     id: index + 6,

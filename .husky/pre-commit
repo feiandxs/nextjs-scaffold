@@ -1,1 +1,3 @@
+# pnpm biome format ./src
 pnpm lint # 检查已改动的文件
+
