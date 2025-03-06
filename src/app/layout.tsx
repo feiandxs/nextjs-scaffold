@@ -6,6 +6,8 @@ import { siteInfo } from '@/constants/site-info';
 
 // theme
 import { ThemeProvider } from '@/components/theme-provider';
+// 导入ClientProvider
+import { ClientProvider } from '@/components/common/client-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,9 +42,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <ClientProvider>
+            {children}
+          </ClientProvider>
         </ThemeProvider>
-
       </body>
     </html>
   );
