@@ -1,9 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["src/components/ui/**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -17,14 +23,17 @@
     // 关闭原生的 no-unused-vars 规则
     "no-unused-vars": "off",
     // 启用 @typescript-eslint 版本的规则
-    "@typescript-eslint/no-unused-vars": ["warn", {
-      // 允许以下划线开头的变量未使用
-      "argsIgnorePattern": "^_",
-      // 允许在类型定义中存在未使用的变量
-      "varsIgnorePattern": "^_",
-      // 允许在函数参数中存在未使用的变量
-      "ignoreRestSiblings": true
-    }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        // 允许以下划线开头的变量未使用
+        "argsIgnorePattern": "^_",
+        // 允许在类型定义中存在未使用的变量
+        "varsIgnorePattern": "^_",
+        // 允许在函数参数中存在未使用的变量
+        "ignoreRestSiblings": true
+      }
+    ],
     "import/extensions": [
       0,
       "ignorePackages",
