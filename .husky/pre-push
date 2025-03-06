@@ -1,0 +1,2 @@
+pnpm test # 运行完整的单元测试
+pnpm build # 构建检查

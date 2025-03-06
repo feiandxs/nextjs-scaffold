@@ -1,6 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-pnpm lint
-pnpm build
-pnpm test
+pnpm lint # 检查已改动的文件
