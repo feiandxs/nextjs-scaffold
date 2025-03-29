@@ -4,8 +4,6 @@ import './globals.css';
 
 import { siteInfo } from '@/constants/site-info';
 
-// theme
-import { ThemeProvider } from '@/components/theme-provider';
 // 导入ClientProvider
 import { ClientProvider } from '@/components/common/client-provider';
 
@@ -36,16 +34,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className={inter.className}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ClientProvider>
-            {children}
-          </ClientProvider>
-        </ThemeProvider>
+        <ClientProvider>
+          {children}
+        </ClientProvider>
       </body>
     </html>
   );
