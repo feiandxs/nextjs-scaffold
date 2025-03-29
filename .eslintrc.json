@@ -7,14 +7,18 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": ".",
+    "sourceType": "module"
   },
   "ignorePatterns": ["src/components/ui/**/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
       "parserOptions": {
-        "project": ["./tsconfig.json"]
+        "project": ["./tsconfig.json"],
+        "tsconfigRootDir": ".",
+        "sourceType": "module"
       }
     }
   ],
@@ -34,6 +38,8 @@
         "ignoreRestSiblings": true
       }
     ],
+    "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "@typescript-eslint/no-throw-literal": "error",
     "import/extensions": [
       0,
       "ignorePackages",
