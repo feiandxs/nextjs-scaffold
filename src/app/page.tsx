@@ -8,8 +8,6 @@ function delay(ms: number) {
   return new Promise((resolve) => { setTimeout(resolve, ms); });
 }
 
-export const runtime = 'edge';
-
 export const metadata: Metadata = {
   title: `Home | ${siteInfo.name}`,
   description: siteInfo.description,
