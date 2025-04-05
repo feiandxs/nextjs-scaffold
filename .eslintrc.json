@@ -11,7 +11,10 @@
     "tsconfigRootDir": ".",
     "sourceType": "module"
   },
-  "ignorePatterns": ["src/components/ui/**/*"],
+  "ignorePatterns": [
+    "src/components/ui/**/*",
+    "src/hooks/use-mobile.ts*"
+  ],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
