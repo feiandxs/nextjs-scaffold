@@ -5,7 +5,7 @@ const AdminPage = () => (
     <p className='mb-4'>欢迎使用管理系统，这里是内容区域。</p>
 
     {/* 测试滚动 */}
-    {Array(20).fill(0).map((_, index) => (
+    {new Array(20).fill(0).map((_, index) => (
       <div
         // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
         key={index}
